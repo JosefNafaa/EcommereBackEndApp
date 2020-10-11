@@ -21,14 +21,14 @@ public class EmailController {
 
 	@RequestMapping("/email")
 	@GetMapping()
-	public String msg(@RequestBody Client user) {
+	public String msg(@RequestBody Client client) {
 		
 		try {
-			notificationSender.sendNotification(user);
+			notificationSender.sendNotification(client);
 		} catch (MailException e) {
 			System.out.println(e.getMessage());
 
 		}
-		return "success d'envoi de la part de : "+user.getEmail();
+		return "success d'envoi de la part de : "+client.getEmail();
 	}
 }

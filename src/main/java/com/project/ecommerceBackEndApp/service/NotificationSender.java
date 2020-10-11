@@ -19,8 +19,9 @@ public class NotificationSender {
 
 		SimpleMailMessage mail = new SimpleMailMessage();
 
-		mail.setTo("king.nowStore@gmail.com");
-		mail.setFrom(client.getEmail());
+		mail.setTo("nafaa.youssef93@gmail.com");
+
+		mail.setFrom("nafaa.youssef93@gmail.com");
 		mail.setSubject(client.getSubject());
 		mail.setText(client.getText());
 
